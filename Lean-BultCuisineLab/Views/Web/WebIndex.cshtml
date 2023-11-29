@@ -1,0 +1,84 @@
+﻿﻿
+@using Microsoft.AspNetCore.Identity
+@using Lean_BultCuisineLab.Areas.Identity.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="C:\Users\Todor\source\repos\FeastFit\FeastFit\wwwroot\css\site.css" />
+</head>
+
+<body>
+    @if(User.IsInRole("Admin")){
+        <div class="input-form">
+            <form>
+                <div class="inputBox">
+                    <p>
+                        Enter cuisine<br />eg. African, Asian, American, British, Cajun, Caribbean, Chinese
+                        <input type="text" required="required" name="cuisine" id="cuisine" />
+                    </p>
+                    <p>
+                        Enter query
+                        <input type="text" required="required" name="query" />
+                    </p>
+                    <p>
+                        Enter Max Calories
+                        <input type="text" required="required" name="maxCalories" />
+                    </p>
+                    <p>
+                        Enter Minimum Protein
+                        <input type="text" required="required" name="minProtein" />
+                    </p>
+                    <p>
+                        Enter Minimum Carbohydrates
+                        <input type="text" required="required" name="minCarbs" />
+                    </p>
+                    <button type="submit">Search</button>
+                </div>
+
+            </form>
+            <form class="inputBox" method="post" action="@Url.Action("DeleteAllRecords", "Web")">
+                <button type="submit">Search Another Recipe</button>
+            </form>
+        </div>
+    }
+   
+    @if (Model != null && Model.Count>0)
+    {
+
+        <div class="table-form">
+            <table>
+                <thead>
+                    <tr>
+                        <th><a href="?sortOrder=title@(ViewBag.TitleSortOrder == "title" ? "_desc" : "")">Title</a></th>
+                        <th><a href="?sortOrder=maxCalories@(ViewBag.CaloriesSortOrder == "maxCalories" ? "_desc" : "")">Calories</a></th>
+                        <th><a href="?sortOrder=proteinAmount@(ViewBag.ProteinSortOrder == "proteinAmount" ? "_desc" : "")">Protein Amount</a></th>
+                        <th><a href="?sortOrder=carbAmount@(ViewBag.CarbSortOrder == "carbAmount" ? "_desc" : "")">Carb Amount</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Title</td>
+                            <td>@item.MaxCalories kcal</td>
+                            <td>@item.ProteinAmount P</td>
+                            <td>@item.CarbAmount C</td>
+                            <td>
+                                <img src="@item.RecipeImage" alt="@item.Title">
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+      
+        
+     
+    }
+
+</body>
+</html>

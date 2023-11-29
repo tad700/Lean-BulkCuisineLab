@@ -1,0 +1,271 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed';
+    color:#fff;
+}
+.navbar-brand{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#00d8f6f4;
+    position:relative;
+    width:300px;
+    font-size:23px;
+    font-weight:bolder;
+    height:46px;
+    text-align:center;
+    
+
+}
+
+
+
+.inputBox button {
+    color: #FFF;
+    background-color: #0d6efd;
+    border-radius: 15px;
+    width: 250px;
+    height: 40px;
+}
+
+.form-inline button {
+border-radius:15px;
+    height:46px;
+    color: #FFF;
+    width: auto;
+    background-color: #0d6efd;
+}
+button:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+
+.HomeContainer {
+    position: absolute;
+    left: 0px;
+    top: 160px;
+    width: 99vw;
+    height: 76vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HomeContainer img {
+    padding: 0px;
+    width: 360px;
+    height: 56vh;
+    transition: width 1s, height 1.5s;
+    margin-right: 30px;
+    opacity: .5;
+    z-index: 2;
+}
+
+    .HomeContainer img:hover {
+        transition: width .5s, height 1s, opacity .5s ease-in-out;
+        opacity: .8;
+        width: 390px;
+        height: 60vh;
+    }
+
+
+
+.image-container {
+    position: relative;
+}
+
+    .image-container img {
+        width: 360px;
+        height: 56vh;
+        transition: width 1s, height 1.5s;
+        margin-right: 30px;
+        opacity: .5;
+    }
+
+        .image-container img:hover {
+            transition: width 0.5s, height 1s, opacity 0.5s ease-in-out;
+            opacity: .7;
+            width: 390px;
+            height: 60vh;
+        }
+        .image-container a{
+
+        }
+
+.HomeContainer p {
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+    left: -17px;
+    opacity: .7;
+    
+}
+
+
+.HomeContainer a {
+    text-decoration: none;
+    z-index:0;
+}
+
+
+header a {
+    background: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    border-radius: 15px;
+    width: auto;
+    position: relative;
+    text-align: center;
+    transition: .3s;
+}
+
+
+    header a:hover {
+        background: #dedcdc;
+    }
+
+header ul {
+    gap: 10px;
+}
+
+body {
+    margin-bottom: 0px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 8, 20, 0.7), rgba(0, 8, 20, 0.7)), url('https://i0.wp.com/themaplecuttingboard.com/wp-content/uploads/2018/09/food-kitchen-cutting-board-cooking-high-resolution-background-images-desktop-images-of-windows-download-wallpaper-amazing-cool-best-wallpaper-ever-images-pictures-1600x1016.jpg?ssl=1') no-repeat center center;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+}
+
+.inputBox {
+    position: relative;
+    width: 250px;
+}
+
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255, 0,19);
+    background: #002e31a4;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+}
+
+        .inputBox input:focus {
+            background: #00575ca4;
+            transition: background .3s;
+        }
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255, 0,4);
+    background: #002e31a4;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    margin-bottom: 10px;
+    
+}
+
+
+.form-control:disabled {
+    background: linear-gradient(to right,#5b0000, #f20a0a83);
+}
+
+.form-control:focus {
+    background: #00575ca4;
+    transition: background 0.3s;
+    color: white;
+}
+.table-form{
+    position:absolute;
+    right:100px;
+    width:800px;
+    top:9%;
+
+}
+
+    .table-form table {
+        border: solid red 1px;
+    }
+table td {
+    font-size: large;
+    backdrop-filter: blur(2px);
+    text-align: center;
+
+    border: solid rgb(92, 94, 98) 1px;
+}
+table img{
+    width:150px;
+    height:100px;
+}
+
+
+table tr {
+    margin: 0px;
+    text-align: center;
+    border: solid rgb(92, 94, 98) 1px;
+    transition: .3s;
+}
+
+    table tr:hover {
+        background: #462a2a3d;
+        border-left-color: #ffffff;
+    }
+
+
+
+/*table {
+    position: relative;
+    left: 60vh;
+    bottom: 50vh;
+    border: solid red 1px;
+    width: 70vh;
+    margin: 10px;
+}
+
+    table td {
+        font-size: large;
+        backdrop-filter: blur(2px);
+        text-align: center;
+        border: solid rgb(92, 94, 98) 1px;
+    }
+
+
+    table tr {
+        margin: 0px;
+        text-align: center;
+        border: solid rgb(92, 94, 98) 1px;
+        transition: .3s;
+    }
+
+        table tr:hover {
+            background: #462a2a3d;
+            border-left-color: #ffffff;
+        }
+
+        table tr img {
+            position: relative;
+            width: 150px;
+            height: 90px;
+            opacity: 1;
+            transition: width 0.5s, height 0.5s;
+        }
+
+    table th {
+        width: 150px;
+        text-align: center;
+    }*/

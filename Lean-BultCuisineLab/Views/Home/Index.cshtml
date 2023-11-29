@@ -1,0 +1,69 @@
+﻿﻿
+@using Microsoft.AspNetCore.Identity
+@using Lean_BultCuisineLab.Areas.Identity.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="C:\Users\Todor\source\repos\FeastFit\FeastFit\wwwroot\css\site.css" />
+</head>
+
+<body>
+    
+    <form>
+        <div class="HomeContainer">
+
+            <div class="image-container">
+
+                <img src="https://i.pinimg.com/564x/8e/5b/a7/8e5ba7ec864dcd8d4c2b7183b50e18cd.jpg" alt="Image 1" />
+                <p>Home</p>
+
+            </div>
+
+
+            <div class="image-container">
+                @if (SignInManager.IsSignedIn(User))
+                {<a href="Web/WebIndex">
+                    <img src="https://i.pinimg.com/originals/64/8c/79/648c7973a35d9c4c07e448c1056bb148.gif" alt="Image 2" />
+                    <p>Enter</p>
+                    </a>
+                    
+                }else{
+                    <a href="/Identity/Account/Register">
+                            <img src="https://i.pinimg.com/originals/64/8c/79/648c7973a35d9c4c07e448c1056bb148.gif" alt="Image 2" />
+                            <p>Register First</p>
+                        </a>
+                }
+              
+
+            </div>
+
+
+            <div class="image-container">
+                <img src="https://i.pinimg.com/originals/54/ba/a5/54baa51cba33d11a4b8fd97e922300f4.gif" alt="Image 3" />
+                <p>ToDo</p>
+            </div>
+
+
+            <div class="image-container">
+                <a href="Home/Privacy">
+                <img src="https://i.pinimg.com/originals/33/57/23/335723ad866aaa9fd0f08e72429f70b0.gif" alt="Image 4" />
+                <p>Privacy</p>
+                </a>
+            </div>
+        </div>
+
+    </form>
+
+
+
+</body>
+</html>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To FeastFit</h1>
+</div>
